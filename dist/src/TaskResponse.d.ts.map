@@ -1,0 +1,1 @@
+{"version":3,"file":"TaskResponse.d.ts","sourceRoot":"","sources":["../../src/TaskResponse.ts"],"names":[],"mappings":"AAAA,OAAO,SAAS,MAAM,aAAa,CAAA;AAEnC,MAAM,CAAC,OAAO,WAAW,YAAY;IACnC,MAAM,CAAC,EAAE,GAAG,CAAC;IACb,QAAQ,CAAC,EAAE,SAAS,EAAE,CAAC;IACvB,sBAAsB,CAAC,EAAE,MAAM,CAAA;IAC/B,uBAAuB,CAAC,EAAE,MAAM,CAAA;IAChC,KAAK,CAAC,EAAE,GAAG,CAAA;CACZ"}
