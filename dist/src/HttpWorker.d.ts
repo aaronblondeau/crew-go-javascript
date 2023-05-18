@@ -1,6 +1,7 @@
 import express from 'express';
 import TaskResponse from './TaskResponse';
 import HttpWorkerGroup from './HttpWorkerGroup';
+import TaskParent from './TaskParent';
 export default abstract class HttpWorker {
     id: string;
     name: string;
@@ -10,7 +11,7 @@ export default abstract class HttpWorker {
     prepare(): Promise<void>;
     serve(): Promise<void>;
     cleanup(): Promise<void>;
-    abstract executeTask(data: any, parents: any[], taskId: string): Promise<TaskResponse>;
+    abstract executeTask(data: any, parents: TaskParent[], taskId: string): Promise<TaskResponse>;
     authMiddleware(req: express.Request, res: express.Response, next: express.NextFunction): Promise<void | express.Response<any, Record<string, any>>>;
     isHealthy(): Promise<boolean>;
 }

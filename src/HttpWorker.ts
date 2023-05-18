@@ -1,6 +1,7 @@
 import express from 'express'
 import TaskResponse from './TaskResponse'
 import HttpWorkerGroup from './HttpWorkerGroup'
+import TaskParent from './TaskParent'
 
 export default abstract class HttpWorker {
   // Worker's id
@@ -56,7 +57,7 @@ export default abstract class HttpWorker {
   }
 
   // Subclasses implement this method to do their thing
-  abstract executeTask(data : any, parents: any[], taskId: string) : Promise<TaskResponse>
+  abstract executeTask(data : any, parents: TaskParent[], taskId: string) : Promise<TaskResponse>
 
   // Subclasses override this method to protect the task execution route provided by serve() above
   async authMiddleware(req: express.Request, res: express.Response, next: express.NextFunction) {
