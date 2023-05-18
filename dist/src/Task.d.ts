@@ -5,7 +5,7 @@ export default interface Task {
     worker: string;
     workgroup?: string;
     key?: string;
-    remainingAttempts?: number;
+    remainingAttempts: number;
     isPaused?: boolean;
     isComplete: boolean;
     runAfter?: string;
