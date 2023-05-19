@@ -49,6 +49,7 @@ export default abstract class HttpWorker {
         res.send(response)
       }
     })
+    console.log('Worker ' + this.id + ' is listening for tasks at /execute/' + this.id)
   }
 
   // Subclasses override this method to cleanup any resources they use (database connections)

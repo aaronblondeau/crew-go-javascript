@@ -96,6 +96,7 @@ var HttpWorker = /** @class */ (function () {
                         }
                     });
                 }); });
+                console.log('Worker ' + this.id + ' is listening for tasks at /execute/' + this.id);
                 return [2 /*return*/];
             });
         });
