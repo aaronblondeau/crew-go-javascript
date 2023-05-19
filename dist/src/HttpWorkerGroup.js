@@ -204,7 +204,7 @@ var HttpWorkerGroup = /** @class */ (function () {
                         for (_i = 0, _a = this.workers; _i < _a.length; _i++) {
                             worker = _a[_i];
                             stopPromise = worker.cleanup();
-                            console.log('~~ ask stop', worker.name, stopPromise);
+                            console.log('~~ ask stop', worker.id, stopPromise);
                             stopPromises.push(stopPromise);
                         }
                         // Set a timeout to force process to exit if workers take too long to shutdown

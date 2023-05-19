@@ -104,7 +104,6 @@ export default class HttpWorkerGroup {
       // Ask each worker to gracefully shutdown
       for (const worker of this.workers) {
         const stopPromise = worker.cleanup()
-        console.log('~~ ask stop', worker.name, stopPromise)
         stopPromises.push(stopPromise)
       }
 
